@@ -1,0 +1,16 @@
+name: Update productive box
+
+on:
+  schedule:
+    - cron: '0 */12 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-gist:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: maxam2017/productive-box@main
+        with:
+          gh_token: ${{ secrets.GH_TOKEN }}
+          gist_id: ${{ secrets.GIST_ID }}
+          timezone: 'Asia/Seoul'
