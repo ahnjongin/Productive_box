@@ -9,7 +9,7 @@ jobs:
   update-gist:
     runs-on: ubuntu-latest
     steps:
-      - uses: maxam2017/productive-box@main
+      - uses: maxam2017/productive-box@master
         with:
           gh_token: ${{ secrets.GH_TOKEN }}
           gist_id: ${{ secrets.GIST_ID }}
